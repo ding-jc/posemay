@@ -1,0 +1,117 @@
+.nav-enter-active,
+.nav-leave-active {
+  transition: transform 0.5s ease;
+}
+
+.nav-enter-from,
+.nav-leave-to {
+  transform: translateY(-100%);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+}
+
+.image {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+:root {
+  --nav-bg: #fff;
+  --nav-color: #000000f2;
+  --nav-active-bg: #000;
+  --nav-active-color: #fff;
+}
+
+.nav-lucency {
+  --nav-bg: #ffffff00;
+  --nav-color: #fffffff2;
+  --nav-active-bg: #ffffff;
+  --nav-active-color: #000;
+}
+
+[data-animated] {
+  opacity: 0;
+}
+
+.data-animated {
+  opacity: 0;
+}
+.animate__animated {
+  opacity: 1;
+}
+
+.card-title {
+  width: fit-content;
+  font-size: 1.6rem;
+  padding: 0.5em 0;
+  margin: 0 auto;
+
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 1em;
+    height: 1px;
+    background: #00000052;
+    bottom: -3px;
+    border-radius: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.card-radius {
+  border-radius: 0.5rem;
+}
+
+.card-shadow {
+  box-shadow: 0 0 12px #0000004d;
+  box-shadow: 0 0 12px linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+  // background-image: ;
+}
+
+// .list-group-move, /* 对移动中的元素应用的过渡 */
+.list-group-enter-active,
+.list-group-leave-active {
+  transition: all 0.3s ease;
+}
+
+.list-group-enter-from,
+.list-group-leave-to {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.list-group-leave-active {
+  position: absolute;
+}
+.list-group-move {
+  transition: transform 0.5s ease;
+}
+
+.pre {
+  align-items: center;
+  width: fit-content;
+  line-height: 1.7em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: clip;
+  height: fit-content;
+}

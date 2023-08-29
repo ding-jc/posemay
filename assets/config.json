@@ -1,0 +1,91 @@
+{
+  "logoText": "宝姿美",
+  "logoText_en": "POSEMAY",
+  "navbar": [
+    {
+      "path": "/",
+      "name": "pageHome"
+    },
+    {
+      "path": "/product",
+      "name": "pageProduct"
+    },
+    {
+      "path": "/about",
+      "name": "pageAbout"
+    }
+  ],
+  "index": {
+    "banner": [
+      ""
+    ],
+    "text": {
+      "title": "化妆粉扑、美妆蛋",
+      "subhead": "  ",
+      "introductory": "东莞宝姿美高分子材料科技有限公司",
+      "title_en": "Makeup puff, makeup egg",
+      "subhead_en": "subhead",
+      "introductory_en": "Dongguan Posemay Polymer Science & Technology Co..Lto"
+    }
+  },
+  "footer": {
+    "list1": [
+      {
+        "name": "地址",
+        "name_en": "Add",
+        "text": "中国 广东 东莞 桥头镇东江恒福路2号2号楼",
+        "text_en": "No.32Linzhong No.1 street, Qingxi Town.Dongquan City,Guangdong Prov.,Chin",
+        "url": ""
+      },
+      {
+        "name": "电话",
+        "name_en": "Tel",
+        "text": "+86-0769-87335153",
+        "url": ""
+      },
+      {
+        "name": "传真",
+        "name_en": "Fax",
+        "text": "+86-0769-87335153",
+        "url": ""
+      },
+      {
+        "name": "邮箱",
+        "name_en": "Fax",
+        "text": "wangming1121@gmail.com",
+        "url": ""
+      },
+      {
+        "name": "公司网址",
+        "name_en": "Web",
+        "text": "www.posemay.com",
+        "url": "www.posemay.com"
+      },
+      {
+        "name": "阿里巴巴",
+        "name_en": "Alibaba web",
+        "text": "http://posemay.cn.1688.com",
+        "url": "http://posemay.cn.1688.com"
+      }
+    ],
+    "list2": [
+      {
+        "icon": "/image/bg.png",
+        "img": "/image/bg.png",
+        "name": "微信公众号",
+        "name_en": "WeChat Official Account",
+        "hover": false,
+        "url": "",
+        "show": "img"
+      },
+      {
+        "icon": "/image/bg.png",
+        "img": "/image/bg.png",
+        "name": "新浪微博",
+        "name_en": "Sina microblog",
+        "hover": true,
+        "url": ""
+      }
+    ]
+  }
+}

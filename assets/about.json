@@ -1,0 +1,183 @@
+[
+  {
+    "type": "card",
+    "title": "公司简介",
+    "title_en": "COMPANY PROFILE",
+    "column": 1,
+    "content": "",
+    "radius": true,
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 1,
+        "radius": true,
+        "card": [
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/company.png",
+                "href": "#",
+                "text": [
+                  {
+                    "tag": "h1",
+                    "value": "东莞宝姿美高分子材料科技有限公司",
+                    "algin": "center"
+                  },
+                  {
+                    "tag": "h2",
+                    "value": "我司对产品质量严格把关，采用进口高品质美国陶氏进口原料及先进的自动化生产工艺，保证我们的每一款产品，消费者购买时来放心，使用时开心，用后舒心。",
+                    "algin": "center"
+                  }
+                ],
+                "text_en": "Company"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "list": [
+          {
+            "title": "",
+            "subhead": "",
+            "introductory": "东莞宝姿美高分子材料科技有限公司成立于2013年5月，是一家集开发，生产，销售于一体美妆工具制造企业。我们专注于为客户提供最专业的、最具个性的、最满意的专属定制产品服务。于2019年应业务拓展需要，厂房由清溪镇搬迁到东莞桥头镇，宝姿美持续扩大产业规模，吸引专业人才，秉承“安全、品质、每一个人是每一道工序的责任人”的服务理念，不断进步，为客户带来全新的美丽体验。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "title": "生产设备",
+    "title_en": "PRODUCTION EQUIPMENT ",
+    "radius": true,
+    "column": 2,
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 1,
+        "padding": "10px",
+        "radius": false,
+        "card": [
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/factory1.jpg"
+              },
+              {
+                "url": "/image/factory2.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "title": "设备自动化及严格保证产品质量的稳定",
+            "subhead": "",
+            "introductory": "发泡半自动化流水线5条，单班日产能12.5w烘烤自动化生产线3条，每条线单班日产能4w研磨机器（前段全自动机20台 前段半自动机器16台 前段异形仿形机12台 后段研磨机13台 日产能15w ）平面磨边机4台，打样机器程序自动化。包装为无尘车间 3条包装流水线，枕式包装3台，喷码自动化"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "title": "原材料控制及筛选",
+    "title_en": "RAW MATERIAL CONTROL AND SCREENING",
+    "radius": true,
+    "column": 2,
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 2,
+        "padding": "0.5rem",
+        "card": [
+          {
+            "title": "原料出厂检测报告",
+            "img": [
+              {
+                "url": "/image/test1.jpg"
+              }
+            ]
+          },
+          {
+            "title": "原料入库抽检做检测",
+            "img": [
+              {
+                "url": "/image/test2.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "size": 1,
+            "title": "",
+            "subhead": "",
+            "introductory": "宝姿美坚持使用高品质进口材料以保证产品质量稳定性确保产品使用安全可靠，我们使用材料基本上都选择国际性公司要求具有REACH甚至加州65检测报告。"
+          },
+          {
+            "size": 1,
+            "title": "",
+            "subhead": "",
+            "introductory": "虽然高品质进口材料成本偏高，我们愿意吸收这块稍高的成本通过提高生产效率以提高我们的竞争力。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "title": "开发及质量监控",
+    "title_en": "DEVELOPMENT AND QUALITY CONTROL",
+    "radius": true,
+    "column": 2,
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 2,
+        "padding": "0.5rem",
+        "card": [
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/factory1.jpg"
+              },
+              {
+                "url": "/image/factory2.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "size": 1.2,
+            "title": "",
+            "subhead": "宝姿美员工160人 拥有10人的开发及质量管理队伍",
+            "introductory": "开发不断创新，并按照客户要求量体裁衣提供系统解决方案。\n在线质控监督生产及时发现问题并解决问题，记录标识从而确保产品可追踪。\n质量体系严格执行，确保客户满意度不断提高。"
+          }
+        ]
+      }
+    ]
+  }
+]

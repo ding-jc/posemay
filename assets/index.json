@@ -1,0 +1,140 @@
+[
+  {
+    "type": "card",
+    "title": "产品介绍",
+    "title_en": "PRODUCT INTRODUCTION",
+    "radius": true,
+    "column": 4,
+    "padding": "1rem",
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 2,
+        "card": [
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/beauty_02.jpg"
+              }
+            ]
+          },
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/beauty_05.jpg"
+              }
+            ]
+          },
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/beauty_09.jpg"
+              }
+            ]
+          },
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/beauty_10.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "title": "亲水性化妆绵产品",
+            "subhead": "",
+            "introductory": "亲水性化妆绵产品是最近几年由美国科技人员开发出的一款美妆工具\n同传统的乳胶海绵相比，它有着细腻，柔软，良好的亲肤性，不吃粉、非乳胶等优点\n并很好地规避了传统乳胶海绵的一些缺点：异味，乳胶过敏，粗孔。干湿两用可体验出不同效果"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 1,
+        "padding": "1rem",
+        "card": [
+          {
+            "title": "",
+            "img": [
+              {
+                "url": "/image/beauty_17.jpg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "title": "亲水性沐浴绵产品",
+            "subhead": "",
+            "introductory": "具有极强的锁水性能，遇水胀大，同传统的PVA,木浆，珍珠绵相比，它生产工艺环保，无刺激性；\n有着细腻，良好的亲肤性，亲水性等优点，并可添加VE,竹炭，天然香精等。\n极其适合儿童及女性皮肤使用。"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "card",
+    "title": "原材料控制及筛选",
+    "title_en": "RAW MATERIAL CONTROL AND SCREENING",
+    "radius": true,
+    "column": 2,
+    "cardlist": [
+      {
+        "type": "image",
+        "content": "内容内容",
+        "column": 2,
+        "padding": "0.5rem",
+        "card": [
+          {
+            "title": "原料出厂检测报告",
+            "img": [
+              {
+                "url": "/image/test1.jpg"
+              }
+            ]
+          },
+          {
+            "title": "原料入库抽检做检测",
+            "img": [
+              {
+                "url": "/image/test2.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "radius": false,
+        "list": [
+          {
+            "size": 1,
+            "title": "",
+            "subhead": "",
+            "introductory": "宝姿美坚持使用高品质进口材料以保证产品质量稳定性确保产品使用安全可靠，我们使用材料基本上都选择国际性公司要求具有REACH甚至加州65检测报告。"
+          },
+          {
+            "size": 1,
+            "title": "",
+            "subhead": "",
+            "introductory": "虽然高品质进口材料成本偏高，我们愿意吸收这块稍高的成本通过提高生产效率以提高我们的竞争力。"
+          }
+        ]
+      }
+    ]
+  }
+]
