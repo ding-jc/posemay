@@ -1,7 +1,15 @@
 <template>
   <div class="product no-scrollbar" ref="page">
-    <Banner @classify="changeClassify" />
-    <ProductContent ref="pContent" />
+    <Banner
+      @classify="changeClassify"
+      :data="classifyExhibition"
+      :tagLabel="tagLabel"
+    />
+    <ProductContent
+      ref="pContent"
+      :data="classifyExhibition"
+      :tagLabel="tagLabel"
+    />
     <Footer />
   </div>
 </template>
@@ -10,6 +18,8 @@
 import Banner from '../views/Banner/Banner.vue'
 import Footer from '../views/Footer/Footer.vue'
 import ProductContent from '../views/ProductContent/ProductContent.vue'
+import useClassify from '../views/ProductContent/use-classify'
+const { classifyExhibition, tagLabel } = useClassify()
 
 const pContent = ref<InstanceType<typeof ProductContent>>()
 /**切换到对应类别标签 */

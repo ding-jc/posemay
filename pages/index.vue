@@ -10,7 +10,8 @@
             {{ onlang(titleData).subhead }}
           </h3>
           <h3 style="font-size: 1.5em">
-            {{ onlang(titleData).introductory }}
+            {{ $t('company') }}
+            <!-- {{ onlang(titleData).introductory }} -->
           </h3>
         </div>
         <div class="more">

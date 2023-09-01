@@ -3,6 +3,8 @@ export default {
   pageAbout: "关于我们",
   pageProduct: '产品',
 
+  company: "东莞宝姿美高分子材料科技有限公司",
+
   goPurchase: '前往购买',
 
   knowProduct: "了解产品",

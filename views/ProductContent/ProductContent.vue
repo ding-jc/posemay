@@ -6,7 +6,7 @@
           <iconFilter @click="isFilter = !isFilter" />
         </span>
       </template> -->
-      <template v-for="item in classifyExhibition" :key="item.name">
+      <template v-for="item in props.data" :key="item.name">
         <n-tab-pane :name="item.name" :tab="$lang(item).name">
           <div class="product-nav-filter" v-if="0">
             <collapseTransition class="tag" :disabled="!isFilter">
@@ -56,7 +56,7 @@ import collapseTransition from '../../component/transition/collapse-transition.v
 import iconClose from '../../icon/icon-close.vue'
 import Modal from '../ProductList/Modal.vue'
 import ProductList from '../ProductList/ProductList.vue'
-import useClassify from './use-classify'
+import { ClassifyExhibition } from './use-classify'
 export type Exhibition = {
   name: string
   name_en?: string
@@ -70,19 +70,27 @@ export type Exhibition = {
   tag?: string[]
   tag_en?: string[]
 }[]
-const navRef = ref<HTMLElement>()
 
-const { classifyExhibition, tagLabel } = useClassify()
+const emit = defineEmits<{ (e: 'update:modelValue', value: string): void }>()
+const props = defineProps<{
+  modelValue?: string
+  data: ClassifyExhibition
+  tagLabel: {
+    name: string
+    name_en: string
+  }[]
+}>()
+const navRef = ref<HTMLElement>()
 
 const { locale } = useI18n()
 
 /**当前分类标签 */
-const tabvalue = ref('全部')
+const tabvalue__ = ref('全部')
 
 /**查找英文选项 */
 const toEnTag = (tag: string) => {
   return locale.value === 'en'
-    ? tagLabel.value.find(v => v.name == tag)?.name_en || tag
+    ? props.tagLabel.find(v => v.name == tag)?.name_en || tag
     : tag
 }
 
@@ -110,10 +118,21 @@ const changeTabs = (tag?: string) => {
       behavior: 'smooth',
     })
   }
-  if (classifyExhibition.value.map(v => v.name).includes(tag)) {
+  if (props.data.map(v => v.name).includes(tag)) {
     tabvalue.value = tag
   }
 }
+
+/**当前分类标签 */
+const tabvalue = computed({
+  get() {
+    return props.modelValue || tabvalue__.value
+  },
+  set(value) {
+    tabvalue__.value = value
+    emit('update:modelValue', value)
+  },
+})
 
 defineExpose({
   /**切换分类标签 */

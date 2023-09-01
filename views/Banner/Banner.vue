@@ -9,8 +9,11 @@
         @click="emit('classify', item.to)"
         :title="item.to"
       >
-        <img :src="item.url" alt="" />
-        <pre class="pre">{{ item.intro }}</pre>
+        <img :src="item.url" :alt="item.name" />
+
+        <pre class="pre">
+           <p>{{ item.name }}</p>
+          {{ item.intro }}</pre>
       </div>
     </div>
     <div class="text">{{ dtoItemRef.length }}</div>
@@ -48,43 +51,27 @@
 </template>
 
 <script setup lang="ts">
+import { ClassifyExhibition } from '../ProductContent/use-classify'
+const props = defineProps<{
+  data: ClassifyExhibition
+}>()
 const emit = defineEmits<{ (e: 'classify', tag?: string): void }>()
-const imglist = [
-  {
-    url: '/image/bg.png',
-    intro: '立体粉扑',
-    to: '立体粉扑',
-  },
-  {
-    url: '/image/beauty_17.jpg',
-    intro: '平面粉扑',
-    to: '平面粉扑',
-  },
-  {
-    url: '/image/bg.png',
-    intro: '类别介绍3',
-  },
-  {
-    url: '/image/beauty_17.jpg',
-    intro: '类别介绍4',
-  },
-  {
-    url: '/image/bg.png',
-    intro: '类别介绍5',
-  },
-  {
-    url: '/image/beauty_17.jpg',
-    intro: '类别介绍6',
-  },
-  {
-    url: '/image/bg.png',
-    intro: '类别介绍7',
-  },
-  {
-    url: '/image/beauty_17.jpg',
-    intro: '类别介绍',
-  },
-]
+
+const imglist = computed(() => {
+  const li = props.data
+
+    .filter(v => v.name !== '全部')
+    .map(v => {
+      const data = v.data?.[0] || {}
+      return {
+        name: v.name,
+        to: v.name,
+        url: data.img?.[0] || '',
+        intro: data.introduce || '',
+      }
+    })
+  return li
+})
 
 const imageShow = ref(0)
 const stateShow = ref(0)
@@ -96,7 +83,7 @@ const dto = ref<HTMLElement>()
 const imageNext = () => {
   oprnShoe.value = false
   imageShow.value = imageShow.value + 1
-  if (imageShow.value >= imglist.length) {
+  if (imageShow.value >= imglist.value.length) {
     imageShow.value = 0
   }
   nextTick(() => {
@@ -156,15 +143,17 @@ const scrollToMiddle = (index: number) => {
       margin: 0 auto;
       object-fit: cover;
       display: block;
+      filter: brightness(90%);
     }
     pre {
       position: absolute;
       top: 0;
       left: 0;
       display: block;
-      font-size: 2rem;
+      font-size: 1.4rem;
       box-sizing: border-box;
       padding: 2rem;
+      color: #303030;
     }
     .image-show {
       opacity: 1;

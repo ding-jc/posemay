@@ -39,9 +39,10 @@
           <div class="product-content-title" ref="title">
             {{ $lang(pItem).name }}
           </div>
-          <div class="product-content-tag">
+          <!-- 标签 -->
+          <!-- <div class="product-content-tag">
             <span v-for="item in $lang(pItem).tag || []">{{ item }}</span>
-          </div>
+          </div> -->
           <div class="product-content-pre">
             <pre>{{ $lang(pItem).introduce }}</pre>
           </div>

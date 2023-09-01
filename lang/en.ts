@@ -2,6 +2,7 @@ export default {
   pageHome: "HOME",
   pageAbout: "ABOUT",
   pageProduct: "PRODUCT",
+  company: "Dongguan Posemay polymer Science & Technology CO.,Ltd",
 
   goPurchase: "Go purchase",
 

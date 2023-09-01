@@ -15,17 +15,15 @@ export type Exhibition = {
   tag_en?: string[]
 }[]
 
-
+export type ClassifyExhibition = {
+  name: string
+  name_en: string
+  conunt: number,//统计每个分类分产品个数
+  data: Exhibition
+}[]
 
 export default () => {
-  const classifyExhibition = ref<
-    {
-      name: string
-      name_en: string
-      conunt: number,//统计每个分类分产品个数
-      data: Exhibition
-    }[]
-  >([])
+  const classifyExhibition = ref<ClassifyExhibition>([])
 
   const tagLabel = ref<{
     name: string

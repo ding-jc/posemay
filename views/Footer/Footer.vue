@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div>
         <h2>
-          <p>东莞宝姿美高分子材料科技有限公司</p>
+          <p style="font-size: 1.4em">{{ $t('company') }}</p>
           <p v-for="item in footerConfig.list1 || []">
             {{ $lang(item).name }} ：
             <a :href="'http://' + item.url" v-if="item.url" target="_">
