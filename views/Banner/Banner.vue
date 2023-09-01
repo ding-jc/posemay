@@ -9,11 +9,11 @@
         @click="emit('classify', item.to)"
         :title="item.to"
       >
-        <img :src="item.url" :alt="item.name" />
+        <img :src="item.url" :alt="$lang(item).name" />
 
         <pre class="pre">
-           <p>{{ item.name }}</p>
-          {{ item.intro }}</pre>
+           <p>{{ $lang(item).name }}</p>
+          {{  $lang(item).intro }}</pre>
       </div>
     </div>
     <div class="text">{{ dtoItemRef.length }}</div>
@@ -60,14 +60,16 @@ const emit = defineEmits<{ (e: 'classify', tag?: string): void }>()
 const imglist = computed(() => {
   const li = props.data
 
-    .filter(v => v.name !== '全部')
+    .filter(v => v.name !== '全部' && v.name !== '其它')
     .map(v => {
       const data = v.data?.[0] || {}
       return {
         name: v.name,
+        name_en: v.name_en,
         to: v.name,
-        url: data.img?.[0] || '',
+        url: v.img || data.img?.[0] || '',
         intro: data.introduce || '',
+        intro_en: data.introduce_en || '',
       }
     })
   return li

@@ -18,6 +18,7 @@ export type Exhibition = {
 export type ClassifyExhibition = {
   name: string
   name_en: string
+  img: string
   conunt: number,//统计每个分类分产品个数
   data: Exhibition
 }[]
@@ -37,6 +38,9 @@ export default () => {
   let arrs_en: string[] = []
   // 全部列表
   let all: Exhibition = []
+  // 分类图片
+  const arrsImg = new Map<string, string>()
+
   // 保存分类的列表
   const classifyMap = new Map<string, Exhibition>()
   const num = new Map<string, number>()//统计每个分类分产品个数
@@ -64,6 +68,10 @@ export default () => {
         num.set(ci, conunt + 1)
         const ob = classifyMap.get(ci) || []
         classifyMap.set(ci, [...ob, { ...data, key: Symbol(ci) }])
+
+        if (!arrsImg.has(ci)) {
+          arrsImg.set(ci, v.url)
+        }
       })
     } else {
       if (!arrs.includes('其它')) {
@@ -85,6 +93,7 @@ export default () => {
       v.tag.forEach((ic, index) => {
         if (!tag.includes(ic)) {
           tag.push(ic);
+
           tagLabel.value.push(
             {
               name: ic,
@@ -105,16 +114,28 @@ export default () => {
   classifyMap.set('全部', all)
   arrs.unshift('全部')
   arrs_en.unshift('all')
+
   // 把数据保存到响应式对象
   arrs.forEach((value, index) => {
     const data = classifyMap.get(value)
+    const img = tagLabel.value.find(v => v.name === value)
     classifyExhibition.value.push({
       name: value,
+      img: arrsImg.get(value) || '',
       name_en: arrs_en[index] || value,
       conunt: num.get(value) || 0,
       data: data || [],
     })
   })
+
+
+  tag = []
+  arrs = []
+  arrs_en = []
+  all = []
+  classifyMap.clear()
+  num.clear()
+  arrsImg.clear()
   return {
 
     classifyExhibition,
